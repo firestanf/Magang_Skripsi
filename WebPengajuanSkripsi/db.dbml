@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bimbingan_final" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=PKL-PC;Initial Catalog=bimbingan_final;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="bimbingan_onlineConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.v_chat" Member="v_chats">
+    <Type Name="v_chat">
+      <Column Name="id_chat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_room" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isi" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="nim" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nama_pengirim" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nid" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nama_penerima" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_room" Member="v_rooms">
+    <Type Name="v_room">
+      <Column Name="id_room" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_mahasiswa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pembimbing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tgl_room" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_proposal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="judul_skripsi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="nim" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_jurusan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pembimbing_1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pembimbing_2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_peminatan" Member="v_peminatans">
+    <Type Name="v_peminatan">
+      <Column Name="id_peminatan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nama_peminatan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_fakultas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_jurusan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nama_fakultas" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nama_jurusan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.v_proposal" Member="v_proposals">
+    <Type Name="v_proposal">
+      <Column Name="id_proposal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_mahasiswa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tgl_submit" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="judul_skripsi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="id_pembimbing_1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pembimbing_2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status_proposal" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="catatan_kaprodi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_kaprodi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_peminatan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_thn_akademik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dosen_1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dosen_2" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nim" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="id_jurusan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nama_peminatan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nama_thn_akademik" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_thn_akademik" Member="tb_thn_akademiks">
+    <Type Name="tb_thn_akademik">
+      <Column Name="id_thn_akademik" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nama_thn_akademik" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_bimbingan" Member="tb_bimbingans">
+    <Type Name="tb_bimbingan">
+      <Column Name="id_bimbingan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="file_bimbingan" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="tgl_upload" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="id_room" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tb_room_tb_bimbingan" Member="tb_room" ThisKey="id_room" OtherKey="id_room" Type="tb_room" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_dosen" Member="tb_dosens">
+    <Type Name="tb_dosen">
+      <Column Name="id_dosen" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nid" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tgl_lahir" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="id_jurusan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_fakultas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_jabatan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pendidikan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="bidang_keahlian" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tb_dosen_tb_proposal" Member="tb_proposals" ThisKey="id_dosen" OtherKey="id_pembimbing_1" Type="tb_proposal" />
+      <Association Name="tb_dosen_tb_proposal1" Member="tb_proposals1" ThisKey="id_dosen" OtherKey="id_pembimbing_2" Type="tb_proposal" />
+      <Association Name="tb_dosen_tb_room" Member="tb_rooms" ThisKey="id_dosen" OtherKey="id_pembimbing" Type="tb_room" />
+      <Association Name="tb_fakulta_tb_dosen" Member="tb_fakulta" ThisKey="id_fakultas" OtherKey="id_fakultas" Type="tb_fakulta" IsForeignKey="true" />
+      <Association Name="tb_jabatan_tb_dosen" Member="tb_jabatan" ThisKey="id_jabatan" OtherKey="id_jabatan" Type="tb_jabatan" IsForeignKey="true" />
+      <Association Name="tb_jurusan_tb_dosen" Member="tb_jurusan" ThisKey="id_jurusan" OtherKey="id_jurusan" Type="tb_jurusan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_fakultas" Member="tb_fakultas">
+    <Type Name="tb_fakulta">
+      <Column Name="id_fakultas" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nama_fakultas" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tb_fakulta_tb_dosen" Member="tb_dosens" ThisKey="id_fakultas" OtherKey="id_fakultas" Type="tb_dosen" />
+      <Association Name="tb_fakulta_tb_mahasiswa" Member="tb_mahasiswas" ThisKey="id_fakultas" OtherKey="id_fakultas" Type="tb_mahasiswa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_jabatan" Member="tb_jabatans">
+    <Type Name="tb_jabatan">
+      <Column Name="id_jabatan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nama_jabatan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tb_jabatan_tb_dosen" Member="tb_dosens" ThisKey="id_jabatan" OtherKey="id_jabatan" Type="tb_dosen" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_jurusan" Member="tb_jurusans">
+    <Type Name="tb_jurusan">
+      <Column Name="id_jurusan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nama_jurusan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tb_jurusan_tb_dosen" Member="tb_dosens" ThisKey="id_jurusan" OtherKey="id_jurusan" Type="tb_dosen" />
+      <Association Name="tb_jurusan_tb_mahasiswa" Member="tb_mahasiswas" ThisKey="id_jurusan" OtherKey="id_jurusan" Type="tb_mahasiswa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_kaprodi" Member="tb_kaprodis">
+    <Type Name="tb_kaprodi">
+      <Column Name="id_pengguna" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="posisi" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="id_jurusan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_fakultas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_mahasiswa" Member="tb_mahasiswas">
+    <Type Name="tb_mahasiswa">
+      <Column Name="id_mahasiswa" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nim" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_jurusan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_fakultas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ipk" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="alamat" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="telp" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tb_mahasiswa_tb_proposal" Member="tb_proposals" ThisKey="id_mahasiswa" OtherKey="id_mahasiswa" Type="tb_proposal" />
+      <Association Name="tb_mahasiswa_tb_room" Member="tb_rooms" ThisKey="id_mahasiswa" OtherKey="id_mahasiswa" Type="tb_room" />
+      <Association Name="tb_fakulta_tb_mahasiswa" Member="tb_fakulta" ThisKey="id_fakultas" OtherKey="id_fakultas" Type="tb_fakulta" IsForeignKey="true" />
+      <Association Name="tb_jurusan_tb_mahasiswa" Member="tb_jurusan" ThisKey="id_jurusan" OtherKey="id_jurusan" Type="tb_jurusan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_peminatan" Member="tb_peminatans">
+    <Type Name="tb_peminatan">
+      <Column Name="id_peminatan" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nama_peminatan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_fakultas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_jurusan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_proposal" Member="tb_proposals">
+    <Type Name="tb_proposal">
+      <Column Name="id_proposal" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_mahasiswa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tgl_submit" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="judul_skripsi" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="id_pembimbing_1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pembimbing_2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status_proposal" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="catatan_kaprodi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_kaprodi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_peminatan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_thn_akademik" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tb_dosen_tb_proposal" Member="tb_dosen" ThisKey="id_pembimbing_1" OtherKey="id_dosen" Type="tb_dosen" IsForeignKey="true" />
+      <Association Name="tb_dosen_tb_proposal1" Member="tb_dosen1" ThisKey="id_pembimbing_2" OtherKey="id_dosen" Type="tb_dosen" IsForeignKey="true" />
+      <Association Name="tb_mahasiswa_tb_proposal" Member="tb_mahasiswa" ThisKey="id_mahasiswa" OtherKey="id_mahasiswa" Type="tb_mahasiswa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_room" Member="tb_rooms">
+    <Type Name="tb_room">
+      <Column Name="id_room" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_mahasiswa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_pembimbing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tgl_room" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_proposal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tb_room_tb_bimbingan" Member="tb_bimbingans" ThisKey="id_room" OtherKey="id_room" Type="tb_bimbingan" />
+      <Association Name="tb_room_tb_chat" Member="tb_chats" ThisKey="id_room" OtherKey="id_room" Type="tb_chat" />
+      <Association Name="tb_dosen_tb_room" Member="tb_dosen" ThisKey="id_pembimbing" OtherKey="id_dosen" Type="tb_dosen" IsForeignKey="true" />
+      <Association Name="tb_mahasiswa_tb_room" Member="tb_mahasiswa" ThisKey="id_mahasiswa" OtherKey="id_mahasiswa" Type="tb_mahasiswa" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_chat" Member="tb_chats">
+    <Type Name="tb_chat">
+      <Column Name="id_chat" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_room" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_sender" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_recipient" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="isi" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tanggal_chat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tb_room_tb_chat" Member="tb_room" ThisKey="id_room" OtherKey="id_room" Type="tb_room" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

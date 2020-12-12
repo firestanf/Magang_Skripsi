@@ -1,0 +1,423 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CF1D5C2-76A9-48AA-A3A3-D237B4D3AB6F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebPengajuanSkripsi</RootNamespace>
+    <AssemblyName>WebPengajuanSkripsi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44330</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="add_peminatan.aspx" />
+    <Content Include="add_thn_akademik.aspx" />
+    <Content Include="add_bimbingan.aspx" />
+    <Content Include="bimbingan_mhs.aspx" />
+    <Content Include="edit_pengajuan.aspx" />
+    <Content Include="dosen.aspx" />
+    <Content Include="mahasiswa.aspx" />
+    <Content Include="list_pengajuan.aspx" />
+    <Content Include="aksi_pengajuan.aspx" />
+    <Content Include="bimbingan.aspx" />
+    <Content Include="detail_bimbingan.aspx" />
+    <Content Include="Menu_reporting.aspx" />
+    <Content Include="thn_akademik.aspx" />
+    <Content Include="peminatan.aspx" />
+    <Content Include="view_pengajuan.aspx" />
+    <Content Include="add_pengajuan.aspx" />
+    <Content Include="Content\assets\css\cs-skin-elastic.css" />
+    <Content Include="Content\assets\css\lib\chosen\chosen-sprite%402x.png" />
+    <Content Include="Content\assets\css\lib\chosen\chosen-sprite.png" />
+    <Content Include="Content\assets\css\lib\chosen\chosen.css" />
+    <Content Include="Content\assets\css\lib\chosen\chosen.min.css" />
+    <Content Include="Content\assets\css\lib\datatable\buttons.bootstrap.min.css" />
+    <Content Include="Content\assets\css\lib\datatable\buttons.dataTables.min.css" />
+    <Content Include="Content\assets\css\lib\datatable\dataTables.bootstrap.min.css" />
+    <Content Include="Content\assets\css\lib\vector-map\jqvmap.min.css" />
+    <Content Include="Content\assets\css\style.css" />
+    <Content Include="Content\assets\fonts\icomoon\icomoon.svg" />
+    <Content Include="Content\assets\fonts\icomoon\index.html" />
+    <Content Include="Content\assets\js\dashboard.js" />
+    <Content Include="Content\assets\js\init\chartjs-init.js" />
+    <Content Include="Content\assets\js\init\datatables-init.js" />
+    <Content Include="Content\assets\js\init\flot-chart-init.js" />
+    <Content Include="Content\assets\js\init\fullcalendar-init.js" />
+    <Content Include="Content\assets\js\init\gmap-init.js" />
+    <Content Include="Content\assets\js\init\peitychart-init.js" />
+    <Content Include="Content\assets\js\init\vector-init.js" />
+    <Content Include="Content\assets\js\init\weather-init.js" />
+    <Content Include="Content\assets\js\lib\chosen\chosen.jquery.js" />
+    <Content Include="Content\assets\js\lib\chosen\chosen.jquery.min.js" />
+    <Content Include="Content\assets\js\lib\chosen\chosen.proto.js" />
+    <Content Include="Content\assets\js\lib\chosen\chosen.proto.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.bootstrap.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.colVis.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.flash.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.html5.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\buttons.print.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\dataTables.bootstrap.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\dataTables.buttons.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\datatables.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\jquery-1.12.4.js" />
+    <Content Include="Content\assets\js\lib\data-table\jquery.dataTables.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\jszip.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\pdfmake.min.js" />
+    <Content Include="Content\assets\js\lib\data-table\vfs_fonts.js" />
+    <Content Include="Content\assets\js\lib\gmap\gmapApi.js" />
+    <Content Include="Content\assets\js\lib\gmap\gmaps.js" />
+    <Content Include="Content\assets\js\lib\gmap\gmaps.min.js" />
+    <Content Include="Content\assets\js\main.js" />
+    <Content Include="Content\assets\js\vmap.sampledata.js" />
+    <Content Include="Content\assets\js\widgets.js" />
+    <Content Include="Content\assets\scss\style.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fonts\icomoon\icomoon.svg" />
+    <Content Include="Content\fonts\icomoon\index.html" />
+    <Content Include="Content\images\.gitignore" />
+    <Content Include="Content\images\admin.jpg" />
+    <Content Include="Content\images\avatar\1.jpg" />
+    <Content Include="Content\images\avatar\2.jpg" />
+    <Content Include="Content\images\avatar\3.jpg" />
+    <Content Include="Content\images\avatar\4.jpg" />
+    <Content Include="Content\images\avatar\5.jpg" />
+    <Content Include="Content\images\avatar\6.jpg" />
+    <Content Include="Content\images\avatar\64-1.jpg" />
+    <Content Include="Content\images\avatar\64-2.jpg" />
+    <Content Include="Content\images\favicon.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\logo2.png" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\skin-elastic\cs-skin-elastic.css" />
+    <Content Include="Content\skin-elastic\style.css" />
+    <Content Include="dashboard.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="pengajuan.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\dashboard.js" />
+    <Content Include="db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\assets\css\style.css.map" />
+    <Content Include="Content\assets\fonts\icomoon\icomoon.eot" />
+    <Content Include="Content\assets\fonts\icomoon\icomoon.ttf" />
+    <Content Include="Content\assets\fonts\icomoon\icomoon.woff" />
+    <Content Include="Content\assets\scss\style.css.map" />
+    <Content Include="Content\assets\scss\style.scss" />
+    <Content Include="Content\images\logo.psd" />
+    <None Include="db.dbml.layout">
+      <DependentUpon>db.dbml</DependentUpon>
+    </None>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\vmap.sampledata.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\widgets.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_peminatan.aspx.cs">
+      <DependentUpon>add_peminatan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_peminatan.aspx.designer.cs">
+      <DependentUpon>add_peminatan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_thn_akademik.aspx.cs">
+      <DependentUpon>add_thn_akademik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_thn_akademik.aspx.designer.cs">
+      <DependentUpon>add_thn_akademik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_bimbingan.aspx.cs">
+      <DependentUpon>add_bimbingan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_bimbingan.aspx.designer.cs">
+      <DependentUpon>add_bimbingan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bimbingan_mhs.aspx.cs">
+      <DependentUpon>bimbingan_mhs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bimbingan_mhs.aspx.designer.cs">
+      <DependentUpon>bimbingan_mhs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_pengajuan.aspx.cs">
+      <DependentUpon>edit_pengajuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_pengajuan.aspx.designer.cs">
+      <DependentUpon>edit_pengajuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dosen.aspx.cs">
+      <DependentUpon>dosen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dosen.aspx.designer.cs">
+      <DependentUpon>dosen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mahasiswa.aspx.cs">
+      <DependentUpon>mahasiswa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mahasiswa.aspx.designer.cs">
+      <DependentUpon>mahasiswa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="list_pengajuan.aspx.cs">
+      <DependentUpon>list_pengajuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="list_pengajuan.aspx.designer.cs">
+      <DependentUpon>list_pengajuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="aksi_pengajuan.aspx.cs">
+      <DependentUpon>aksi_pengajuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="aksi_pengajuan.aspx.designer.cs">
+      <DependentUpon>aksi_pengajuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bimbingan.aspx.cs">
+      <DependentUpon>bimbingan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bimbingan.aspx.designer.cs">
+      <DependentUpon>bimbingan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detail_bimbingan.aspx.cs">
+      <DependentUpon>detail_bimbingan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detail_bimbingan.aspx.designer.cs">
+      <DependentUpon>detail_bimbingan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_reporting.aspx.cs">
+      <DependentUpon>Menu_reporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu_reporting.aspx.designer.cs">
+      <DependentUpon>Menu_reporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thn_akademik.aspx.cs">
+      <DependentUpon>thn_akademik.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thn_akademik.aspx.designer.cs">
+      <DependentUpon>thn_akademik.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="peminatan.aspx.cs">
+      <DependentUpon>peminatan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="peminatan.aspx.designer.cs">
+      <DependentUpon>peminatan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="view_pengajuan.aspx.cs">
+      <DependentUpon>view_pengajuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="view_pengajuan.aspx.designer.cs">
+      <DependentUpon>view_pengajuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_pengajuan.aspx.cs">
+      <DependentUpon>add_pengajuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_pengajuan.aspx.designer.cs">
+      <DependentUpon>add_pengajuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pengajuan.aspx.cs">
+      <DependentUpon>pengajuan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pengajuan.aspx.designer.cs">
+      <DependentUpon>pengajuan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\fonts\icomoon\icomoon.eot" />
+    <Content Include="Content\fonts\icomoon\icomoon.ttf" />
+    <Content Include="Content\fonts\icomoon\icomoon.woff" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62740</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44330/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
